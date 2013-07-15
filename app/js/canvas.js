@@ -1,9 +1,12 @@
 define(["threelib/three"], function() {
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  
   var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+  var camera = new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, 1, 1000 );
 
   var renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(width, height);
 
   var geometry = new THREE.CubeGeometry(1,1,1);
   var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
