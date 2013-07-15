@@ -3,7 +3,7 @@ define(["threelib/three"], function() {
   var height = window.innerHeight;
   
   var scene = new THREE.Scene();
-  var camera = new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, -20, 20 );
+  var camera = new THREE.OrthographicCamera(width/-2, width/2, height/2, height/-2, -20, 20);
 
   var renderer = new THREE.WebGLRenderer();
   renderer.setSize(width, height);
